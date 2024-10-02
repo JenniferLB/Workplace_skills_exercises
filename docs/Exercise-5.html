@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Examining part-time workers – Intro to data exercises</title>
+<title>Understanding satisfaction with work-life balance – Intro to data exercises</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Exercise 4.html">Exercise 4 - Chi-square and t-test</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Exercise-5.html">Exercise 5 - Regression</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,31 +113,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 1.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 1 - SPSS environment</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 2.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 2 - Examining variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 3.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 3 - Relationships between variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 4.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Exercise-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 4 - Chi-square and t-test</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 5.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercise 5 - Regression</span></a>
   </div>
 </li>
@@ -152,20 +152,19 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
-  <li><a href="#syntax" id="toc-syntax" class="nav-link" data-scroll-target="#syntax">Syntax</a>
+  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">Correlation</a></li>
+  <li><a href="#simple-regression" id="toc-simple-regression" class="nav-link" data-scroll-target="#simple-regression">Simple regression</a>
   <ul class="collapse">
-  <li><a href="#recode-a-variable" id="toc-recode-a-variable" class="nav-link" data-scroll-target="#recode-a-variable">Recode a variable</a></li>
-  <li><a href="#comparing-the-health-of-part-time-and-full-time-workers" id="toc-comparing-the-health-of-part-time-and-full-time-workers" class="nav-link" data-scroll-target="#comparing-the-health-of-part-time-and-full-time-workers">Comparing the health of part-time and full-time workers</a>
+  <li><a href="#model-1" id="toc-model-1" class="nav-link" data-scroll-target="#model-1">Model 1</a></li>
+  </ul></li>
+  <li><a href="#dummy-variables" id="toc-dummy-variables" class="nav-link" data-scroll-target="#dummy-variables">Dummy variables</a></li>
+  <li><a href="#multiple-regression" id="toc-multiple-regression" class="nav-link" data-scroll-target="#multiple-regression">Multiple regression</a>
   <ul class="collapse">
-  <li><a href="#what-about-gender" id="toc-what-about-gender" class="nav-link" data-scroll-target="#what-about-gender">What about gender?</a></li>
+  <li><a href="#model-2" id="toc-model-2" class="nav-link" data-scroll-target="#model-2">Model 2</a></li>
+  <li><a href="#model-3" id="toc-model-3" class="nav-link" data-scroll-target="#model-3">Model 3</a></li>
+  <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction</a></li>
   </ul></li>
-  <li><a href="#part-time-work-and-satisfaction-with-work-life-balance" id="toc-part-time-work-and-satisfaction-with-work-life-balance" class="nav-link" data-scroll-target="#part-time-work-and-satisfaction-with-work-life-balance">Part-time work and satisfaction with work-life balance</a>
-  <ul class="collapse">
-  <li><a href="#look-at-the-first-table-and-examine-the-means." id="toc-look-at-the-first-table-and-examine-the-means." class="nav-link" data-scroll-target="#look-at-the-first-table-and-examine-the-means.">Look at the first table and examine the means.</a></li>
-  <li><a href="#now-consider-the-results-of-the-t-test." id="toc-now-consider-the-results-of-the-t-test." class="nav-link" data-scroll-target="#now-consider-the-results-of-the-t-test.">Now consider the results of the t-test.</a></li>
-  </ul></li>
-  <li><a href="#independent-task" id="toc-independent-task" class="nav-link" data-scroll-target="#independent-task">Independent task</a></li>
-  </ul></li>
+  <li><a href="#extra" id="toc-extra" class="nav-link" data-scroll-target="#extra">Extra</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Examining part-time workers</h1>
+<h1 class="title">Understanding satisfaction with work-life balance</h1>
 </div>
 
 
@@ -191,178 +190,280 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Exercises developed by Jen Buckley</p>
-<p>Use data to explore the following questions:</p>
+<p>Are some people more satisfied with their work-life balance?</p>
+<p>In this exercise, you will use correlation and regression to examine satisfaction with work-life balance 🙂⚖️, including:</p>
+<ul>
+<li><p>the correlation between satisfaction with work-life balance and satisfaction with a person’s financial situation. ⚖️💰</p></li>
+<li><p>how satisfaction with work-life balance is related to financial satisfaction, gender and full-time/part-time work. ⚖️⚧️⏲️</p></li>
+</ul>
 <section id="learning-outcomes" class="level3">
 <h3 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h3>
 <p>The learning outcomes of this section are:</p>
 <ul>
-<li><p>Aware of SPSS syntax and can run commands via a syntax file.</p></li>
-<li><p>Understand how to produce cross-tabulations with chi-square test and interpret the output.</p></li>
-<li><p>Understand how to compare means between groups and do a t-test.</p></li>
+<li><p>can use correlation to examine the relationship between continuous variables.</p></li>
+<li><p>can create regression models to examine relationship between variables including adding dummy variables.</p></li>
 </ul>
 </section>
-<section id="syntax" class="level1">
-<h1>Syntax</h1>
-<p>Before we do our analysis, we are going to simplify one of the variables. To do that we are going to use SPSS syntax (code) to create a new variable.</p>
-<p>SPSS can be used via menus or by writing and running code (called SPSS syntax). To use SPSS syntax, you need to open a Syntax file. Syntax files can include code and comments that allow to understand the code.</p>
+<section id="correlation" class="level1">
+<h1>Correlation</h1>
+<p>To start examining the relationship between satisfaction with work-life balance and satisfaction with financial situation, we will examine correlations between the following variables: &nbsp;</p>
 <ul>
-<li><strong>Open a syntax file: FILE &gt; New &gt;Syntax.</strong></li>
+<li><p><code>MCZ_13</code> Overall, how satisfied are you with the balance between the time spend on paid job and the time spend on other aspects of life?</p></li>
+<li><p><code>MCZ_10</code> Overall, how satisfied are you with your financial situation?</p></li>
+<li><p><code>MCZ_7</code> Overall, how satisfied are you with your physical health?</p></li>
 </ul>
-<p>Copy the code below into the your sytax file in the syntax editor. Then, highlight the code and press the green arrow.</p>
-<pre><code>* This is an example of SPSS syntax. 
-* A * indicates the following text is a comment. 
-* Below is the syntax to create a frequency table. 
-
-FREQUENCIES QHealthr.</code></pre>
-<p><img src="SPSS_syntax.png" class="img-fluid"></p>
-<section id="recode-a-variable" class="level2">
-<h2 class="anchored" data-anchor-id="recode-a-variable">Recode a variable</h2>
-<p>The variable <code>QHealthr</code> has five categories (Very good, Good, Fair, Bad, Very bad), some categories have few cases, most notably Very bad only has 37. We are going to simplify the variable so that it has three categories only: Good, Fair and Bad.</p>
-<p>Add the following code to your syntax file (or make a new one if you need to) then run the code. To run the code, highlight the code you want to run and press the green arrow.</p>
-<pre><code>*Recode self-rated heath to a three category variable 
-Recode QHealthr (1, 2 =1) (3=2) (4, 5=3) (ELSE =copy) into Qhealthr3. 
-Value labels Qhealthr3 
-1 'Good' 
-2 'Fair' 
-3 'Bad'. 
-MISSING VALUES Qhealthr3 (98, 99). 
-CROSSTABS Qhealthr by Qhealthr3. </code></pre>
-<p>You should end up with a table like below.</p>
-<p><img src="images/clipboard-578227785.png" class="img-fluid"></p>
+<p>Use the SPSS menus:</p>
+<ul>
+<li><p><strong>Analyze &gt; Correlate &gt; Bivariate.</strong></p></li>
+<li><p><strong>Add <code>MCZ_13</code>, <code>MCZ_7</code> and <code>MCZ_10</code> to the Variables list.</strong></p></li>
+<li><p><strong>OK.</strong></p></li>
+</ul>
+<p>In the output window, examine the results.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Answer</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Answers</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<ol type="1">
-<li><p>If someone has Very bad health on the variable in the rows, what category do they belong to on the variable in the columns (Qhealtr3)?</p></li>
-<li><p>Is this what we should expect?</p></li>
-</ol>
+<p>Is satisfaction with work life-balance correlated with</p>
+<ul>
+<li><p>Satisfaction with physical health?</p></li>
+<li><p>Satisfaction with financial situation?</p></li>
+</ul>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<ol type="1">
-<li><p>Bad</p></li>
-<li><p>Yes, the new variable combines bad and very bad into one category.</p></li>
-</ol>
+<p>Yes, there are statistically significant weak positive correlations:</p>
+<ul>
+<li><p>0.24 (p&lt;0.001).</p></li>
+<li><p>0.26 (p&lt;0.001).</p></li>
+</ul>
 </div>
 </div>
 </div>
 </section>
-<section id="comparing-the-health-of-part-time-and-full-time-workers" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-the-health-of-part-time-and-full-time-workers">Comparing the health of part-time and full-time workers</h2>
-<p>Create a crosstabulation with a chi-square test examining self-rated health and the variable indicating if someone is working full or part time. The variables are: <code>FtPtWrk</code> and <code>QHealthr3</code> – the new variable.</p>
+<section id="simple-regression" class="level1">
+<h1>Simple regression</h1>
+<p>We are going to try to further understand satisfaction with work-life balance by using regression. We will create three regression models. Each model will include an additional variable:</p>
 <ul>
-<li><strong>Analyse &gt; descriptive statistics &gt; crosstab</strong></li>
+<li><p>Model 1: Satisfaction with financial situation</p></li>
+<li><p>Model 2: Satisfaction with financial situation and gender</p></li>
+<li><p>Model 3: Satisfaction with financial situation, gender, and full-time/part-time.</p></li>
 </ul>
-<p>Which variable in the rows and which in the columns?</p>
-<p>It doesn’t really matter; the numbers will be the same. However, row and column percentages depend on which variable is in the rows and which in the columns.</p>
-<p>Often, we put the dependent variable in the rows and the explanatory variable in the columns and calculate column percentages. This approach means we can compare the distribution of cases across categories of the dependent variable for each category on our independent variable.</p>
+<section id="model-1" class="level3">
+<h3 class="anchored" data-anchor-id="model-1">Model 1</h3>
+<p>To make the first model,</p>
 <ul>
-<li><p><code>FtPtWrk</code> in the columns and <code>QHealthr3</code> in the rows</p></li>
-<li><p>Cells &gt; column percentages &gt; continue</p></li>
-<li><p>Statistics&gt; Chi-square test &gt; continue</p></li>
-<li><p>OK</p>
+<li><p><strong>Analyze &gt; Regression &gt; Linear</strong></p></li>
+<li><p><strong>Under dependent variable, add the variable MCZ_13.</strong></p></li>
+<li><p><strong>Under independent variable, add the variable MCZ_10.</strong></p></li>
+<li><p><strong>Click OK.</strong></p></li>
+</ul>
+<p>Check your results - can you match the results to those in the table below (with some rounding!).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 54%">
+<col style="width: 45%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Variables</td>
+<td><p>Model 1</p>
+<p>(B unstandardised coefficients)</p></td>
+</tr>
+<tr class="even">
+<td>Constant</td>
+<td>5.096</td>
+</tr>
+<tr class="odd">
+<td>Satisfaction with financial situation</td>
+<td>0.260 (0.029) **</td>
+</tr>
+<tr class="even">
+<td>Male</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Fulltime</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>R<sup>2</sup></td>
+<td>0.07</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: * p-values less than 0.05 and ** p-values less than 0.001.</em></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Answers</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <ol type="1">
-<li>Based on the results, what can we conclude about overall differences in health between part-time and full-time workers?</li>
+<li><p>For every unit increase in satisfaction with financial situation, how much does satisfaction with work-life balance increase or decrease?</p></li>
+<li><p>How much of the variation does satisfaction with financial situation accounts for in satisfaction with work life-balance?</p></li>
+<li><p>What might these results suggest about the relationship?</p></li>
 </ol>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <ol type="1">
-<li>There are small differences in the percentages – for example 85 percent of full-time workers indicate having good health compared to 81 percent of part-time workers but the association is not statistically significant (chi-square 4.321, 2 d.f. p=0.115).</li>
+<li><p>According to this model, for a unit increase in satisfaction with financial situation, satisfaction with work-life balance increases by 0.26.</p></li>
+<li><p>The model indicates that satisfaction with financial situation is associated with around 6.6% of the variance in satisfaction with work life-balance.</p></li>
+<li><p>There is a relationship between financial satisfaction and satisfaction with work-life balance. Is it causal i.e.&nbsp;does financial satisfaction lead to greater satisfaction with work-life balance? We don’t know from these results. Moreover, the R<sup>2</sup> value indicates that if financial satisfaction has some influence on work-life balance satisfaction, other factors explain most of the variance in work-life satisfaction.</p></li>
 </ol>
 </div>
 </div>
-</div></li>
-</ul>
-<section id="what-about-gender" class="level3">
-<h3 class="anchored" data-anchor-id="what-about-gender">What about gender?</h3>
-<p>From exercise 3, we found that there were some differences between male and female part-time workers. To investigate this further, we are going to consider gender too. Repeat the crosstabs above and</p>
+</div>
+</section>
+</section>
+<section id="dummy-variables" class="level1">
+<h1>Dummy variables</h1>
+<p>Categorical variables need to be added to regression models as dummy variables with calues of 0 or 1.</p>
+<p>We therefore need to recode some variables in preparation for the next steps in our model building, where we add gender and full-tim/part-time.</p>
+<p>Open a synax file. Copy and run the code below.</p>
+<pre><code>
+*create dummy variables for sex, part-time/full-time work. 
+
+RECODE RSEX (1=1) (2=0) (ELSE=SYSMIS) into Male.
+FREQUENCIES Male. 
+
+RECODE FtPtWkr (1=1) (2=0) (ELSE=SYSMIS) into Fulltime. 
+CROSSTABS FtPtWkr BY Fulltime.</code></pre>
+</section>
+<section id="multiple-regression" class="level1">
+<h1>Multiple regression</h1>
+<p>The next step is to create models with two independent variables.</p>
+<section id="model-2" class="level3">
+<h3 class="anchored" data-anchor-id="model-2">Model 2</h3>
+<p>Create Model 2 by adding gender to the model. Use the new variable named Male. This is a dummy variable coded as 1=Male and 0=Female.</p>
 <ul>
-<li>Add <code>RSEX</code> as a Layer</li>
+<li><p><strong>Analyze &gt; Regression &gt; Linear</strong></p></li>
+<li><p><strong>Under dependent variable, add the variable MCZ_13</strong></p></li>
+<li><p><strong>Under independent variable, add the variable MCZ_10 and Male</strong></p></li>
+<li><p><strong>Click OK</strong></p></li>
 </ul>
-<p>Consider the results.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Answers</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <ol type="1">
-<li>What can we conclude about overall differences in health between part-time and full-time workers for each gender?</li>
+<li><p>What can we conclude about gender differences in satisfaction with work-life balance?</p></li>
+<li><p>Does including gender increase the R<sup>2</sup> value?</p></li>
 </ol>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <ol type="1">
-<li>Among men, there is significant association between being a part-time worker and self-rated health, which less good health indicated by men working part-time then full-time. There is not an association between part-time work and self-rated health among women.</li>
+<li><p>According to this model, on average, males are less happy with their work-life balance than females when control for differences in satisfaction with financial situation i.e.&nbsp;the negative association is independent of satisfaction with financial situation.</p></li>
+<li><p>When we add gender there is a very small increase in the R<sup>2</sup> value. So still lots of variation in satisfaction unexplained by the model.</p></li>
 </ol>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="part-time-work-and-satisfaction-with-work-life-balance" class="level2">
-<h2 class="anchored" data-anchor-id="part-time-work-and-satisfaction-with-work-life-balance">Part-time work and satisfaction with work-life balance</h2>
-<p>It is plausible that part-time workers feel better about their work-life balance than full-time workers.</p>
-<p>In our data, satisfaction with work-life balance is measured by the variable <code>MCZ_13</code>. One way we can examine this idea using data is to compare averages for part-time workers to the average for full-time workers.</p>
-<p>Let’s examine if this is true by comparing the means and doing a t-test.</p>
-<ul>
-<li><strong>Analyse &gt; Compare Means &gt; Independent sample t-test</strong></li>
-</ul>
-<p>&nbsp;In the box,</p>
-<ul>
-<li><p>Add <code>MCZ_13</code> to the Test Variable list</p></li>
-<li><p><code>FtPtWkr</code> to Grouping Variable</p></li>
-<li><p>Click Define groups – for Group 1 put in 1 and Group 2 put in 2 &gt; continue</p></li>
-<li><p>Press OK</p></li>
-</ul>
-<section id="look-at-the-first-table-and-examine-the-means." class="level3">
-<h3 class="anchored" data-anchor-id="look-at-the-first-table-and-examine-the-means.">Look at the first table and examine the means.</h3>
+<section id="model-3" class="level3">
+<h3 class="anchored" data-anchor-id="model-3">Model 3</h3>
+<p>Repeat the above process to add the binary variable <code>Fulltime</code> indicating whether someone works full- or part-time to the model.</p>
+<p>Check your results, match the results in the table below (with rounding!).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Variables</td>
+<td>Model 1</td>
+<td>Model 2</td>
+<td>Model 3</td>
+</tr>
+<tr class="even">
+<td>Constant</td>
+<td>5.10</td>
+<td>5.351</td>
+<td>5.87</td>
+</tr>
+<tr class="odd">
+<td>Satisfaction with financial situation</td>
+<td>0.26 (0.03) ***</td>
+<td>0.252 (0.29)**</td>
+<td>0.268 (0.029)**</td>
+</tr>
+<tr class="even">
+<td>Male</td>
+<td>-</td>
+<td>-..428 (0.13)**</td>
+<td>-0.39 (0.135)</td>
+</tr>
+<tr class="odd">
+<td>Fulltime</td>
+<td>-</td>
+<td>-</td>
+<td>-1.187 (0.145)**</td>
+</tr>
+<tr class="even">
+<td>R<sup>2</sup></td>
+<td>0.066</td>
+<td>0.076</td>
+<td>0.13</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: * p-values less than 0.05 and ** p-values less than 0.001.</em></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Answers</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<p>What are the means for those working full-time and those working part-time? Which group is more satisfied with their work-life balance?</p>
+<ol type="1">
+<li><p>What can you conclude about the relationship between working full or part-time and satisfaction with work-life balance?</p></li>
+<li><p>When we account for working full-time, what happens to the gender difference in satisfaction with work-life balance?</p></li>
+<li><p>Does the value of R<sup>2</sup> increase?</p></li>
+</ol>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<p>Those working full-time has a lower average score 6.61 than those working part-time 6.61</p>
+<ol type="1">
+<li><p>Working full-time is associated with lower satisfaction with work-life balance, with an average score -1..187 lower than those working part-time, controlling for differences in satisfaction with financial situation and gender.</p></li>
+<li><p>Accounting for differences between full-time and part-time employment, the difference between males and females reduces and is no longer statistically significant. (Why? Perhaps males are less satisfied on average because more men work full-time.)</p></li>
+<li><p>The R<sup>2</sup> value increases when we added Fulltime to the model.</p></li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="now-consider-the-results-of-the-t-test." class="level3">
-<h3 class="anchored" data-anchor-id="now-consider-the-results-of-the-t-test.">Now consider the results of the t-test.</h3>
-<p>Refer to the SPSS output in the table labelled <strong>Independent Samples Test</strong>. The table includes results for two t-tests, one with:</p>
-<ul>
-<li><p>‘Equal variances assumed’ - in the top row.</p></li>
-<li><p>‘Equal Variances not assumed’ - in the bottom row.</p></li>
-</ul>
-<p>Which do you use? Levene’s Test for Equality of Variances is designed to tell whether we can assume equal variances or not. The results are included in the first two columns containing data.</p>
-<p>A result of p&lt;0.05 would mean it is very unlikely that variances are equal between the two groups, and therefore it is wise to use the results when ‘Equal variances are not assumed’. Conversely, if p is not p&lt;0.05, we can consider “Equal variances assumed”.</p>
-<p>Identify the columns t, df and Sig. (2-tailed) – these are the t-test results.</p>
+<section id="prediction" class="level3">
+<h3 class="anchored" data-anchor-id="prediction">Prediction</h3>
+<p>You can use the results of the regression model to estimate values for people with specific criteria.</p>
+<p>In this case, let’s predict someone’s satisfaction with their work-life balance if they are male, work full-time and score 7 on their satisfaction with their financial situation.</p>
+<p>This is the regression equation</p>
+<p>= constant + B1 (MCZ_10) + B2(Male) + B3 (Fulltime)</p>
+<p>Add the values and calculate the score.</p>
+<p>=5.873 + 0.27(7) -0.04(1) -1.19(1)</p>
+<p>=5.87+1.89-0.04-1.19</p>
+<p>=6.53</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Answers</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-<p>According to the T-test, are the differences between part-time workers and full-time workers statistically significant?</p>
+<p>Calculate the score for a female working part-time who is equally satisfied with their financial situation?</p>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-<p>According to the T-test, the difference between part-time workers and full-time workers is statistically significant (t=-8.741, p&lt;0.001).</p>
+<p>=5.873 + 0.27(7) -0.04(0) -1.19(1)</p>
+<p>=5.87+1.89-1.19</p>
+<p>=7.72</p>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="independent-task" class="level2">
-<h2 class="anchored" data-anchor-id="independent-task">Independent task</h2>
-<p>Choose one of the following to examine:</p>
+<section id="extra" class="level1">
+<h1>Extra</h1>
 <ul>
-<li><p>How does self-rated health vary between managers, those in intermediate roles and those in routine and manual positions (<code>NSECAC3</code>).</p></li>
-<li><p>Are part-time workers less satisfied with their financial situation (<code>MCZ_10</code>)?</p></li>
+<li><p>Can you think of any problems with this model? For example, are there important factors left out? Do you agree with decisions about dependent and independent variables?</p></li>
+<li><p>Add one of the following variables to the model</p>
+<ul>
+<li><p>Self-rated health (remember about dummy variables)</p></li>
+<li><p>Satisfaction with health</p></li>
+</ul></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

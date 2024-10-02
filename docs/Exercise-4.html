@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Explore distributions of single variables – Intro to data exercises</title>
+<title>Examining part-time workers – Intro to data exercises</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Exercise 2.html">Exercise 2 - Examining variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Exercise-4.html">Exercise 4 - Chi-square and t-test</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,31 +113,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 1.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 1 - SPSS environment</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Exercise-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 2 - Examining variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 3.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 3 - Relationships between variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 4.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercise 4 - Chi-square and t-test</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercise 5.html" class="sidebar-item-text sidebar-link">
+  <a href="./Exercise-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 5 - Regression</span></a>
   </div>
 </li>
@@ -152,16 +152,20 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
-  <li><a href="#create-a-frequency-table" id="toc-create-a-frequency-table" class="nav-link" data-scroll-target="#create-a-frequency-table">Create a frequency table</a>
+  <li><a href="#syntax" id="toc-syntax" class="nav-link" data-scroll-target="#syntax">Syntax</a>
   <ul class="collapse">
-  <li><a href="#the-output" id="toc-the-output" class="nav-link" data-scroll-target="#the-output">The output</a></li>
-  </ul></li>
-  <li><a href="#charts-and-statistics" id="toc-charts-and-statistics" class="nav-link" data-scroll-target="#charts-and-statistics">Charts and Statistics</a>
+  <li><a href="#recode-a-variable" id="toc-recode-a-variable" class="nav-link" data-scroll-target="#recode-a-variable">Recode a variable</a></li>
+  <li><a href="#comparing-the-health-of-part-time-and-full-time-workers" id="toc-comparing-the-health-of-part-time-and-full-time-workers" class="nav-link" data-scroll-target="#comparing-the-health-of-part-time-and-full-time-workers">Comparing the health of part-time and full-time workers</a>
   <ul class="collapse">
-  <li><a href="#histogram-and-descriptive-statistics" id="toc-histogram-and-descriptive-statistics" class="nav-link" data-scroll-target="#histogram-and-descriptive-statistics">Histogram and descriptive statistics</a></li>
+  <li><a href="#what-about-gender" id="toc-what-about-gender" class="nav-link" data-scroll-target="#what-about-gender">What about gender?</a></li>
   </ul></li>
-  <li><a href="#independent-task-explore-other-variables" id="toc-independent-task-explore-other-variables" class="nav-link" data-scroll-target="#independent-task-explore-other-variables">Independent task: explore other variables</a></li>
-  <li><a href="#recap-three-levels-of-measurement" id="toc-recap-three-levels-of-measurement" class="nav-link" data-scroll-target="#recap-three-levels-of-measurement">Recap: Three levels of measurement</a></li>
+  <li><a href="#part-time-work-and-satisfaction-with-work-life-balance" id="toc-part-time-work-and-satisfaction-with-work-life-balance" class="nav-link" data-scroll-target="#part-time-work-and-satisfaction-with-work-life-balance">Part-time work and satisfaction with work-life balance</a>
+  <ul class="collapse">
+  <li><a href="#look-at-the-first-table-and-examine-the-means." id="toc-look-at-the-first-table-and-examine-the-means." class="nav-link" data-scroll-target="#look-at-the-first-table-and-examine-the-means.">Look at the first table and examine the means.</a></li>
+  <li><a href="#now-consider-the-results-of-the-t-test." id="toc-now-consider-the-results-of-the-t-test." class="nav-link" data-scroll-target="#now-consider-the-results-of-the-t-test.">Now consider the results of the t-test.</a></li>
+  </ul></li>
+  <li><a href="#independent-task" id="toc-independent-task" class="nav-link" data-scroll-target="#independent-task">Independent task</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -170,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Explore distributions of single variables</h1>
+<h1 class="title">Examining part-time workers</h1>
 </div>
 
 
@@ -187,114 +191,178 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Exercises developed by Jen Buckley</p>
-<p>Now, in this exercise you can start examining variables in the dataset.</p>
-<p>You can explore values or distributions of a single variable using univariate descriptive statistics (note: ‘uni’ indicates one). A variable’s level of measurement determines which statistical techniques are appropriate to use. (Note: you can find a <a href="#recap-three-levels-of-measurement">Recap: Three levels of measurement</a> at the end of this page).</p>
+<p>Use data to explore the following questions:</p>
 <section id="learning-outcomes" class="level3">
 <h3 class="anchored" data-anchor-id="learning-outcomes">Learning outcomes</h3>
 <p>The learning outcomes of this section are:</p>
 <ul>
-<li><p>Understand how to obtain frequency tables, measures of central tendency and dispersion.</p></li>
-<li><p>Select methods appropriate for different levels of measurement of data.</p></li>
+<li><p>Aware of SPSS syntax and can run commands via a syntax file.</p></li>
+<li><p>Understand how to produce cross-tabulations with chi-square test and interpret the output.</p></li>
+<li><p>Understand how to compare means between groups and do a t-test.</p></li>
 </ul>
 </section>
-<section id="create-a-frequency-table" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-frequency-table">Create a frequency table</h2>
-<p>A frequency table:</p>
+<section id="syntax" class="level1">
+<h1>Syntax</h1>
+<p>Before we do our analysis, we are going to simplify one of the variables. To do that we are going to use SPSS syntax (code) to create a new variable.</p>
+<p>SPSS can be used via menus or by writing and running code (called SPSS syntax). To use SPSS syntax, you need to open a Syntax file. Syntax files can include code and comments that allow to understand the code.</p>
 <ul>
-<li><p>is a simple way to look at the values of a variable for a nominal or ordinal variable.</p></li>
-<li><p>gives the number of cases in each category; SPSS also provides percentages.</p></li>
+<li><strong>Open a syntax file: FILE &gt; New &gt;Syntax.</strong></li>
 </ul>
-<p><strong>Task: Produce a frequency table for the variable measuring self-rated health</strong></p>
-<p>In the SPSS, menus:</p>
-<ul>
-<li><strong>Select Analyze &gt; Descriptive statistics &gt; Frequencies</strong></li>
-</ul>
-<p><img src="Menu_freq.png" class="img-fluid"></p>
-<p>This will open the Frequencies Dialogue box.</p>
-<p>Here, you need to select the variable you want to analyse by clicking on the variable in the list. Find the variable <code>QHealthr</code>.</p>
-<blockquote class="blockquote">
-<p><strong>Tip - Are you seeing a list of variable names or labels?</strong></p>
-<p>You can choose whether to see variable names or labels in dialogue boxes. To change what you see, click on any variable in the list. It is often easier to search variable names.</p>
-</blockquote>
-<section id="the-output" class="level3">
-<h3 class="anchored" data-anchor-id="the-output">The output</h3>
-<p>Once you have selected your variable, click ‘ok’ and SPSS will print the result in a separate ‘output’ file.</p>
-<p>Review your results:</p>
+<p>Copy the code below into the your sytax file in the syntax editor. Then, highlight the code and press the green arrow.</p>
+<pre><code>* This is an example of SPSS syntax. 
+* A * indicates the following text is a comment. 
+* Below is the syntax to create a frequency table. 
+
+FREQUENCIES QHealthr.</code></pre>
+<p><img src="SPSS_syntax.png" class="img-fluid"></p>
+<section id="recode-a-variable" class="level2">
+<h2 class="anchored" data-anchor-id="recode-a-variable">Recode a variable</h2>
+<p>The variable <code>QHealthr</code> has five categories (Very good, Good, Fair, Bad, Very bad), some categories have few cases, most notably Very bad only has 37. We are going to simplify the variable so that it has three categories only: Good, Fair and Bad.</p>
+<p>Add the following code to your syntax file (or make a new one if you need to) then run the code. To run the code, highlight the code you want to run and press the green arrow.</p>
+<pre><code>*Recode self-rated heath to a three category variable 
+Recode QHealthr (1, 2 =1) (3=2) (4, 5=3) (ELSE =copy) into Qhealthr3. 
+Value labels Qhealthr3 
+1 'Good' 
+2 'Fair' 
+3 'Bad'. 
+MISSING VALUES Qhealthr3 (98, 99). 
+CROSSTABS Qhealthr by Qhealthr3. </code></pre>
+<p>You should end up with a table like below.</p>
+<p><img src="images/clipboard-578227785.png" class="img-fluid"></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Answers</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Answer</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>What percentage (to the nearest whole number) indicate their health is Very good?</p>
-<p>How many missing cases do we have?</p>
+<ol type="1">
+<li><p>If someone has Very bad health on the variable in the rows, what category do they belong to on the variable in the columns (Qhealtr3)?</p></li>
+<li><p>Is this what we should expect?</p></li>
+</ol>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>About 37 percent</p>
-<p>4</p>
+<ol type="1">
+<li><p>Bad</p></li>
+<li><p>Yes, the new variable combines bad and very bad into one category.</p></li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="charts-and-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="charts-and-statistics">Charts and Statistics</h2>
-<p>In the Frequencies dialogue box, you can select:</p>
+<section id="comparing-the-health-of-part-time-and-full-time-workers" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-the-health-of-part-time-and-full-time-workers">Comparing the health of part-time and full-time workers</h2>
+<p>Create a crosstabulation with a chi-square test examining self-rated health and the variable indicating if someone is working full or part time. The variables are: <code>FtPtWrk</code> and <code>QHealthr3</code> – the new variable.</p>
 <ul>
-<li><p><strong>Statistics:</strong> which allows you to calculate the mean, median, mode or others.</p></li>
-<li><p><strong>Charts:</strong> which allows you to create bar charts, pie charts or histograms.&nbsp;</p></li>
+<li><strong>Analyse &gt; descriptive statistics &gt; crosstab</strong></li>
 </ul>
-<section id="histogram-and-descriptive-statistics" class="level3">
-<h3 class="anchored" data-anchor-id="histogram-and-descriptive-statistics">Histogram and descriptive statistics</h3>
-<p>We are now going to get some descriptive statistics for the variable <code>MCZ_11</code> ‘Overall, how satisfied are you with your work situation?’</p>
+<p>Which variable in the rows and which in the columns?</p>
+<p>It doesn’t really matter; the numbers will be the same. However, row and column percentages depend on which variable is in the rows and which in the columns.</p>
+<p>Often, we put the dependent variable in the rows and the explanatory variable in the columns and calculate column percentages. This approach means we can compare the distribution of cases across categories of the dependent variable for each category on our independent variable.</p>
 <ul>
-<li><p><strong>Select Analyze &gt; Descriptive statistics &gt; Frequencies</strong></p></li>
-<li><p><strong>Statistics &gt; Mean and Median</strong></p></li>
-<li><p><strong>Charts &gt; Histogram</strong></p></li>
-<li><p><strong>In the main dialogue box, untick ‘Display frequency tables under’ the list of variable names (see picture below)</strong></p></li>
-</ul>
+<li><p><code>FtPtWrk</code> in the columns and <code>QHealthr3</code> in the rows</p></li>
+<li><p>Cells &gt; column percentages &gt; continue</p></li>
+<li><p>Statistics&gt; Chi-square test &gt; continue</p></li>
+<li><p>OK</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Answers</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Answers</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>The variable asks people to score their wellbeing on a scale on 0 to 10. What is the mean score?</p>
-<p>Complete the sentence “Half the cases give a value of ___or higher”.</p>
+<ol type="1">
+<li>Based on the results, what can we conclude about overall differences in health between part-time and full-time workers?</li>
+</ol>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>6.48</p>
-<p>“Half the cases give a value of 7 or higher”. The variable has a median of 7.</p>
+<ol type="1">
+<li>There are small differences in the percentages – for example 85 percent of full-time workers indicate having good health compared to 81 percent of part-time workers but the association is not statistically significant (chi-square 4.321, 2 d.f. p=0.115).</li>
+</ol>
+</div>
+</div>
+</div></li>
+</ul>
+<section id="what-about-gender" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-gender">What about gender?</h3>
+<p>From exercise 3, we found that there were some differences between male and female part-time workers. To investigate this further, we are going to consider gender too. Repeat the crosstabs above and</p>
+<ul>
+<li>Add <code>RSEX</code> as a Layer</li>
+</ul>
+<p>Consider the results.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Answers</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<ol type="1">
+<li>What can we conclude about overall differences in health between part-time and full-time workers for each gender?</li>
+</ol>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<ol type="1">
+<li>Among men, there is significant association between being a part-time worker and self-rated health, which less good health indicated by men working part-time then full-time. There is not an association between part-time work and self-rated health among women.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="independent-task-explore-other-variables" class="level2">
-<h2 class="anchored" data-anchor-id="independent-task-explore-other-variables">Independent task: explore other variables</h2>
-<p>Now select another variable to explore using the <strong>Frequencies</strong> menu. &nbsp;</p>
-<p>Once you have some output, copy a chart or table to a slide. Add a sentence to describe the data.</p>
-<p>Can you work out how to improve the appearance of output?</p>
+<section id="part-time-work-and-satisfaction-with-work-life-balance" class="level2">
+<h2 class="anchored" data-anchor-id="part-time-work-and-satisfaction-with-work-life-balance">Part-time work and satisfaction with work-life balance</h2>
+<p>It is plausible that part-time workers feel better about their work-life balance than full-time workers.</p>
+<p>In our data, satisfaction with work-life balance is measured by the variable <code>MCZ_13</code>. One way we can examine this idea using data is to compare averages for part-time workers to the average for full-time workers.</p>
+<p>Let’s examine if this is true by comparing the means and doing a t-test.</p>
+<ul>
+<li><strong>Analyse &gt; Compare Means &gt; Independent sample t-test</strong></li>
+</ul>
+<p>&nbsp;In the box,</p>
+<ul>
+<li><p>Add <code>MCZ_13</code> to the Test Variable list</p></li>
+<li><p><code>FtPtWkr</code> to Grouping Variable</p></li>
+<li><p>Click Define groups – for Group 1 put in 1 and Group 2 put in 2 &gt; continue</p></li>
+<li><p>Press OK</p></li>
+</ul>
+<section id="look-at-the-first-table-and-examine-the-means." class="level3">
+<h3 class="anchored" data-anchor-id="look-at-the-first-table-and-examine-the-means.">Look at the first table and examine the means.</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Answers</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>What are the means for those working full-time and those working part-time? Which group is more satisfied with their work-life balance?</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>Those working full-time has a lower average score 6.61 than those working part-time 6.61</p>
+</div>
+</div>
+</div>
 </section>
-<section id="recap-three-levels-of-measurement" class="level2">
-<h2 class="anchored" data-anchor-id="recap-three-levels-of-measurement">Recap: Three levels of measurement</h2>
-<blockquote class="blockquote">
-<p>Categorical variables can be nominal or ordinal:</p>
+<section id="now-consider-the-results-of-the-t-test." class="level3">
+<h3 class="anchored" data-anchor-id="now-consider-the-results-of-the-t-test.">Now consider the results of the t-test.</h3>
+<p>Refer to the SPSS output in the table labelled <strong>Independent Samples Test</strong>. The table includes results for two t-tests, one with:</p>
 <ul>
-<li><p><strong>Nominal variables</strong> are categorical variables that have no order between values, variables such as gender, ethnicity etc.&nbsp;</p></li>
-<li><p><strong>Ordinal variables</strong> are like categorical variables but there is an order to the categories as one category could be assumed to be higher or lower than another category such as level of educational qualification (e.g.&nbsp;none, high school, post-high-school, university).</p></li>
+<li><p>‘Equal variances assumed’ - in the top row.</p></li>
+<li><p>‘Equal Variances not assumed’ - in the bottom row.</p></li>
 </ul>
-<p>Univariate techniques for nominal or ordinal level variables include:</p>
+<p>Which do you use? Levene’s Test for Equality of Variances is designed to tell whether we can assume equal variances or not. The results are included in the first two columns containing data.</p>
+<p>A result of p&lt;0.05 would mean it is very unlikely that variances are equal between the two groups, and therefore it is wise to use the results when ‘Equal variances are not assumed’. Conversely, if p is not p&lt;0.05, we can consider “Equal variances assumed”.</p>
+<p>Identify the columns t, df and Sig. (2-tailed) – these are the t-test results.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Answers</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>According to the T-test, are the differences between part-time workers and full-time workers statistically significant?</p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p>According to the T-test, the difference between part-time workers and full-time workers is statistically significant (t=-8.741, p&lt;0.001).</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="independent-task" class="level2">
+<h2 class="anchored" data-anchor-id="independent-task">Independent task</h2>
+<p>Choose one of the following to examine:</p>
 <ul>
-<li><p>tables with the frequency or percentage of cases in each category or level.</p></li>
-<li><p>bar charts</p></li>
+<li><p>How does self-rated health vary between managers, those in intermediate roles and those in routine and manual positions (<code>NSECAC3</code>).</p></li>
+<li><p>Are part-time workers less satisfied with their financial situation (<code>MCZ_10</code>)?</p></li>
 </ul>
-<p><strong>Interval variables (also known as ‘scale’ or ‘continuous’ or ‘cardinal’ variables)</strong> are variables where there is an order between each increasing value (e.g.&nbsp;2 is higher than 1) and the <em>interval</em> between the different points on the scale are of identical size. Common examples include pay (in pounds) or working time (in hours). For example, for time, the gap between 1 hour and 2 hours is 1 hour, as is the gap between 10 hours and 11 hours, thus the intervals are identical across the scale.</p>
-<p>Univariate techniques for continuous variables include:</p>
-<ul>
-<li><p>histograms,</p></li>
-<li><p>measures of central tendency (e.g.&nbsp;mean, median or mode),</p></li>
-<li><p>and measures of dispersion (e.g.&nbsp;standard deviation, variance, standard error, interquartile range.</p></li>
-</ul>
-</blockquote>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
