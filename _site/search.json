@@ -1,0 +1,219 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Workplace Analysis and Research Skills: SPSS Exercises",
+    "section": "",
+    "text": "Exercises developed by Jen Buckley\n\n\n\n\n\n\nAbout\nIn the following exercises, you can:\n\nexplore real survey data using SPSS.\nexamine relationships between part-time work, gender, and well-being. For example, do part-time workers report better health and wellbeing than fulltime workers and does this vary by gender?\n\nBefore starting the exercises you need to access the data.\n👇\n\n\nAccess the data\nThe exercises use a dataset containing data from the Opinions and Lifestyle Survey, Well-Being Module, Jan-May, 2015, which is a survey run by the UK Office for National Statistics. To access the data:\n\nClick this link: Opinions and Lifestyle Survey, Well-Being Module, April-May 2015: Unrestricted Access Teaching Dataset\nDownload the SPSS version.\n\nNow you can start Exercise 1.",
+    "crumbs": [
+      "Start"
+    ]
+  },
+  {
+    "objectID": "Exercise 4.html",
+    "href": "Exercise 4.html",
+    "title": "Examining part-time workers",
+    "section": "",
+    "text": "Exercises developed by Jen Buckley\nUse data to explore the following questions:",
+    "crumbs": [
+      "Exercise 4 - Chi-square and t-test"
+    ]
+  },
+  {
+    "objectID": "Exercise 4.html#recode-a-variable",
+    "href": "Exercise 4.html#recode-a-variable",
+    "title": "Examining part-time workers",
+    "section": "Recode a variable",
+    "text": "Recode a variable\nThe variable QHealthr has five categories (Very good, Good, Fair, Bad, Very bad), some categories have few cases, most notably Very bad only has 37. We are going to simplify the variable so that it has three categories only: Good, Fair and Bad.\nAdd the following code to your syntax file (or make a new one if you need to) then run the code. To run the code, highlight the code you want to run and press the green arrow.\n*Recode self-rated heath to a three category variable \nRecode QHealthr (1, 2 =1) (3=2) (4, 5=3) (ELSE =copy) into Qhealthr3. \nValue labels Qhealthr3 \n1 'Good' \n2 'Fair' \n3 'Bad'. \nMISSING VALUES Qhealthr3 (98, 99). \nCROSSTABS Qhealthr by Qhealthr3. \nYou should end up with a table like below.\n\n\nQuestionAnswer\n\n\n\nIf someone has Very bad health on the variable in the rows, what category do they belong to on the variable in the columns (Qhealtr3)?\nIs this what we should expect?\n\n\n\n\nBad\nYes, the new variable combines bad and very bad into one category.",
+    "crumbs": [
+      "Exercise 4 - Chi-square and t-test"
+    ]
+  },
+  {
+    "objectID": "Exercise 4.html#compare-health-of-part-time-and-full-timework-workers",
+    "href": "Exercise 4.html#compare-health-of-part-time-and-full-timework-workers",
+    "title": "Examining part-time workers",
+    "section": "Compare health of part-time and full-timework workers",
+    "text": "Compare health of part-time and full-timework workers\nCreate a crosstabulation with a chi-square test examining self-rated health and the variable indicating if someone is working full or part time. The variables are: FtPtWrk and QHealthr3 – the new variable.\n\nAnalyse &gt; descriptive statistics &gt; crosstab\n\nWhich variable in the rows and which in the columns?\nIt doesn’t really matter; the numbers will be the same. However, row and column percentages depend on which variable is in the rows and which in the columns.\nOften, we put the dependent variable in the rows and the explanatory variable in the columns and calculate column percentages. This approach means we can compare the distribution of cases across categories of the dependent variable for each category on our independent variable.\n\nFtPtWrk in the columns and QHealthr3 in the rows\nCells &gt; column percentages &gt; continue\nStatistics&gt; Chi-square test &gt; continue\nOK\n\nQuestionsAnswers\n\n\n\nBased on the results, what can we conclude about overall differences in health between part-time and full-time workers?\n\n\n\n\nThere are small differences in the percentages – for example 85 percent of fulltime workers indicate having good health compared to 81 percent of part-time workers but the association is not statistically significant (chi-square 4.321, 2 d.f. p=0.115).\n\n\n\n\n\n\nWhat about gender?\nFrom exercise 3, we found that there were some differences between male and female part-time workers. To investigate this further, we are going to consider gender too. Repeat the crosstabs above and\n\nAdd RSEX as a Layer\n\nConsider the results.\n\nQuestionsAnswers\n\n\n\nWhat can we conclude about overall differences in health between part-time and full-time workers for each gender?\n\n\n\n\nAmong men, there is significant association between being a part-time worker and self-rated health, which less good health indicated by men working part-time then full-time. There is not an association between part-time work and self-rated health among women.",
+    "crumbs": [
+      "Exercise 4 - Chi-square and t-test"
+    ]
+  },
+  {
+    "objectID": "Exercise 4.html#part-time-work-and-satisfaction-with-work-life-balance",
+    "href": "Exercise 4.html#part-time-work-and-satisfaction-with-work-life-balance",
+    "title": "Examining part-time workers",
+    "section": "Part-time work and satisfaction with work-life balance",
+    "text": "Part-time work and satisfaction with work-life balance\nIt is plausible that part-time workers feel better about their work-life balance than full-time workers.\nIn our data, satisfaction with work-life balance is measured by the variable MCZ_13. One way we can examine this idea using data is to compare averages for part-time workers to the average for full-time workers.\nLet’s examine if this is true by comparing the means and doing a t-test.\n\nAnalyse &gt; Compare Means &gt; Independent sample t-test\n\n In the box,\n\nAdd MCZ_13 to the Test Variable list\nFtPtWkr to Grouping Variable\nClick Define groups – for Group 1 put in 1 and Group 2 put in 2 &gt; continue\nPress OK\n\n\nLook at the first table and examine the means.\n\nQuestionsAnswers\n\n\nWhat are the means for those working full-time and those working part-time? Which group is more satisfied with their work-life balance?\n\n\nThose working full-time has a lower average score 6.61 than those working part-time 6.61\n\n\n\n\n\nNow consider the results of the t-test.\nRefer to the SPSS output in the table labelled Independent Samples Test. The table includes results for two t-tests, one with:\n\n‘Equal variances assumed’ - in the top row.\n‘Equal Variances not assumed’ - in the bottom row.\n\nWhich do you use? Levene’s Test for Equality of Variances is designed to tell whether we can assume equal variances or not. The results are included in the first two columns containing data.\nA result of p&lt;0.05 would mean it is very unlikely that variances are equal between the two groups, and therefore it is wise to use the results when ‘Equal variances are not assumed’. Conversely, if p is not p&lt;0.05, we can consider “Equal variances assumed”.\nIdentify the columns t, df and Sig. (2-tailed) – these are the t-test results.\n\nQuestionsAnswers\n\n\nAccording to the T-test, are the differences between part-time workers and full-time workers statistically significant?\n\n\nAccording to the T-test, the difference between part-time workers and full-time workers is statistically significant (t=-8.741, p&lt;0.001).",
+    "crumbs": [
+      "Exercise 4 - Chi-square and t-test"
+    ]
+  },
+  {
+    "objectID": "Exercise 4.html#independent-task",
+    "href": "Exercise 4.html#independent-task",
+    "title": "Examining part-time workers",
+    "section": "Independent task",
+    "text": "Independent task\nChoose one of the following to examine:\n\nHow does self-rated health vary between managers, those in intermediate roles and those in routine and manual positions (NSECAC3).\nAre part-time workers less satisfied with their financial situation (MCZ_10)?",
+    "crumbs": [
+      "Exercise 4 - Chi-square and t-test"
+    ]
+  },
+  {
+    "objectID": "Exercise 2.html",
+    "href": "Exercise 2.html",
+    "title": "Explore distributions of single variables",
+    "section": "",
+    "text": "Now, in this exercise you can start examining variables in the dataset.\nYou can explore values or distributions of a single variable using univariate descriptive statistics (note: ‘uni’ indicates one). A variable’s level of measurement determines which statistical techniques are appropriate to use. (Note: you can find a Recap: Three levels of measurement at the end of this page).",
+    "crumbs": [
+      "Exercise 2 Examining variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 2.html#create-a-frequency-table",
+    "href": "Exercise 2.html#create-a-frequency-table",
+    "title": "Explore distributions of single variables",
+    "section": "Create a frequency table",
+    "text": "Create a frequency table\nA frequency table:\n\nis a simple way to look at the values of a variable for a nominal or ordinal variable.\ngives the number of cases in each category; SPSS also provides percentages.\n\nTask: Produce a frequency table for the variable measuring self-rated health\nIn the SPSS, menus:\n\nSelect Analyze &gt; Descriptive statistics &gt; Frequencies\n\n\nThis will open the Frequencies Dialogue box.\nHere, you need to select the variable you want to analyse by clicking on the variable in the list. Find the variable QHealthr.\n\nTip - Are you seeing a list of variable names or labels?\nYou can choose whether to see variable names or labels in dialogue boxes. To change what you see, click on any variable in the list. It is often easier to search variable names.\n\n\nThe output\nOnce you have selected your variable, click ‘ok’ and SPSS will print the result in a separate ‘output’ file.\nReview your results:\n\nQuestionsAnswers\n\n\nWhat percentage (to the nearest whole number) indicate their health is Very good?\nHow many missing cases do we have?\n\n\nAbout 37 percent\n4",
+    "crumbs": [
+      "Exercise 2 Examining variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 2.html#charts-and-statistics",
+    "href": "Exercise 2.html#charts-and-statistics",
+    "title": "Explore distributions of single variables",
+    "section": "Charts and Statistics",
+    "text": "Charts and Statistics\nIn the Frequencies dialogue box, you can select:\n\nStatistics: which allows you to calculate the mean, median, mode or others.\nCharts: which allows you to create bar charts, pie charts or histograms. \n\n\nHistogram and descriptive statistics\nWe are now going to get some descriptive statistics for the variable MCZ_11 ‘Overall, how satisfied are you with your work situation?’\n\nSelect Analyze &gt; Descriptive statistics &gt; Frequencies\nStatistics &gt; Mean and Median\nCharts &gt; Histogram\nIn the main dialogue box, untick ‘Display frequency tables under’ the list of variable names (see picture below)\n\n\nQuestionAnswers\n\n\nThe variable asks people to score their wellbeing on a scale on 0 to 10. What is the mean score?\nComplete the sentence “Half the cases give a value of ___or higher”.\n\n\n6.48\n“Half the cases give a value of 7 or higher”. The variable has a median of 7.",
+    "crumbs": [
+      "Exercise 2 Examining variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 2.html#independent-task-explore-other-variables",
+    "href": "Exercise 2.html#independent-task-explore-other-variables",
+    "title": "Explore distributions of single variables",
+    "section": "Independent task: explore other variables",
+    "text": "Independent task: explore other variables\nNow select another variable to explore using the Frequencies menu.  \nOnce you have some output, copy a chart or table to a slide. Add a sentence to describe the data.\nCan you work out how to improve the appearance of output?",
+    "crumbs": [
+      "Exercise 2 Examining variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 2.html#recap-three-levels-of-measurement",
+    "href": "Exercise 2.html#recap-three-levels-of-measurement",
+    "title": "Explore distributions of single variables",
+    "section": "Recap: Three levels of measurement",
+    "text": "Recap: Three levels of measurement\n\nCategorical variables can be nominal or ordinal:\n\nNominal variables are categorical variables that have no order between values, variables such as gender, ethnicity etc. \nOrdinal variables are like categorical variables but there is an order to the categories as one category could be assumed to be higher or lower than another category such as level of educational qualification (e.g. none, high school, post-high-school, university).\n\nUnivariate techniques for nominal or ordinal level variables include:\n\ntables with the frequency or percentage of cases in each category or level.\nbar charts\n\nInterval variables (also known as ‘scale’ or ‘continuous’ or ‘cardinal’ variables) are variables where there is an order between each increasing value (e.g. 2 is higher than 1) and the interval between the different points on the scale are of identical size. Common examples include pay (in pounds) or working time (in hours). For example, for time, the gap between 1 hour and 2 hours is 1 hour, as is the gap between 10 hours and 11 hours, thus the intervals are identical across the scale.\nUnivariate techniques for continuous variables include:\n\nhistograms,\nmeasures of central tendency (e.g. mean, median or mode),\nand measures of dispersion (e.g. standard deviation, variance, standard error, interquartile range.",
+    "crumbs": [
+      "Exercise 2 Examining variables"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Exercise 1.html",
+    "href": "Exercise 1.html",
+    "title": "Introduction: the SPSS environment and data",
+    "section": "",
+    "text": "Before examining the data, Exercise 1 will help you get familiar with the SPSS environment and the dataset used in the exercises.",
+    "crumbs": [
+      "Exercise 1 SPSS environment"
+    ]
+  },
+  {
+    "objectID": "Exercise 1.html#load-the-data",
+    "href": "Exercise 1.html#load-the-data",
+    "title": "Introduction: the SPSS environment and data",
+    "section": "Load the data",
+    "text": "Load the data\n\nLoad the downloaded data-set into the software:\n\neither double click the downloaded file (this does not always work on networked computers).\nor use the menus in SPSS (File &gt; Open).",
+    "crumbs": [
+      "Exercise 1 SPSS environment"
+    ]
+  },
+  {
+    "objectID": "Exercise 1.html#explore-the-spss-environment",
+    "href": "Exercise 1.html#explore-the-spss-environment",
+    "title": "Introduction: the SPSS environment and data",
+    "section": "Explore the SPSS environment",
+    "text": "Explore the SPSS environment\nIn SPSS , you have a:\n\nvariable view\ndata view\n\nYou can alternate between the two by clicking the tabs at the bottom left of the screen. \n\n\nThe variable view\nWhat can you see in the variable view?\n\nClick on the variable view tab.\n\nThe variable view lists all the variables in the dataset, with one variable per row.\nEach column gives a different piece of information regarding the variable. Important information includes:\n\nName: codename for the variable. It might be a shortened version of the question that was asked in the survey, for example the question ‘how old are you’ would be given the variable name ‘age’.\nLabel: more descriptive description of the variable such as ‘Age in years’.\nValues: Variables contain values.\n\nSome values have labels associated with each value. For example, a variable measuring sex would include the categories of male and female which could be coded as male=0 and female=1. Values labels tell you what values mean.  For example, the value 0 has the label ‘male’. \nTo see the values and value labels for a variable, click on the relevant cell and then click to the right of the cell. \nNot all variables have value labels as the values are meaningful e.g. values for income, age, and number of hours worked per week, are all measured numerically.\n\nMissing: Data can include missing values. For example, in a survey some people may not answer all questions (‘item non-response’) and sometimes questions are not relevant to all people (Inapplicable values relate to questionnaire routing).\n\nMissing and inapplicable values tend to be coded as negative numbers (-8 -9 etc.) or very high numbers (99).\nSetting these values as missing in SPSS means they are not included in calculations.\n\n\n\n\nData View\n\nNow click on the data view tab.\n\nIn the data view,\n\neach column represents a variable, the variable names are written at the top of the columns.\neach row represents a unit of data or observation which might be an individual, or a company, or a household.\neach cell therefore is a single piece of data that was collected for one unit of data.\n\nYou can switch between the ‘values’ and ‘value labels’ for each piece of data. To change between the two, select value labels in the view menu",
+    "crumbs": [
+      "Exercise 1 SPSS environment"
+    ]
+  },
+  {
+    "objectID": "Exercise 1.html#explore-the-dataset",
+    "href": "Exercise 1.html#explore-the-dataset",
+    "title": "Introduction: the SPSS environment and data",
+    "section": "Explore the dataset",
+    "text": "Explore the dataset\nNow, explore the dataset to find the answers to the following questions.\n\nQuestionsAnswers\n\n\n\nHow many variables are in the dataset?   \nWhat is the variable name and variable label for the 3rd and 15th variables?\nWhat are the values and value labels for the 16th variable?  \nHow many units of data are there? (tip: scroll to the bottom on the data view sheet)\nIs the 1st unit of data Male or Female. What is their age group?\n\n\n\n\n25   \nMCZ_1 ‘Overall, how satisfied are you with your life nowadays?’ and QHealtr ‘How is your health in general?’\n1 = Male, 2 = Female\n2048\nFemale, 25 to 44",
+    "crumbs": [
+      "Exercise 1 SPSS environment"
+    ]
+  },
+  {
+    "objectID": "Exercise 3.html",
+    "href": "Exercise 3.html",
+    "title": "Relationships between variables: Part-time work, gender and satisfaction",
+    "section": "",
+    "text": "Use data to explore the following questions:",
+    "crumbs": [
+      "Exercise 3 - Relationships between variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 3.html#part-1-gender-differences-in-part-time-employment",
+    "href": "Exercise 3.html#part-1-gender-differences-in-part-time-employment",
+    "title": "Relationships between variables: Part-time work, gender and satisfaction",
+    "section": "Part 1: Gender differences in part-time employment?",
+    "text": "Part 1: Gender differences in part-time employment?\n\nExplore your variables\nStart by creating frequency tables for our first two variables to check their distribution and measurement.\nThe variables are:\n\nRSEX ‘Respondent’s gender’\nFtPtWKr ‘Are you in full-time or part-time employment?’\n\nThe steps are:\n\nAnalyse &gt; descriptive statistics &gt; Frequencies\n\n\nTip: Remember, you can change the list of variables to ‘Display names’.\n\n\nQuestionsAnswers\n\n\n\nWhat is the level of measurement of the two variables?\nWhich variable has more missing values? Why do you think this is?\n\n\n\n\nRSEX and FtPtWKr are categorical variables with two categories.\nFtPtWKr has many more missing values. There are 600 system missing values. These are cases where a question about employment was not applicable.\n\n\n\n\n\n\nCrosstabulation\nTo look at the relationship between two categorical variables (nominal or ordinal) we can use a crosstabulation (‘crosstab’).\nA crosstabulation involving two variables splits cases across categories of both variables. We see the number of cases in each category for one variable that also belong to each category of another. It tells us about how values of one categorical variable are conditional on the values of another.\nWe can express this in counts (raw figures) or in percentages. A common practice is to put independent variable in the columns and ask for column percentages.\nUse the SPSS menu, to create a crosstabulation:\n\nAnalyze &gt; Descriptive Statistics &gt; Crosstabs\n\n\n\n\nCrosstabs dialogue box\nIn the crosstabs dialogue box, put the dependent variable in the ‘row’ and the independent variable in the ‘column’. Therefore,\n\nFtPtWkr in the row\nRSEX in the column\nPress OK\n\n\nThis crosstab has separated the sample into Male, Female and Total. The table we get includes counts only.\nIt is difficult to interpret!\n\nRepeat the steps above and select the Cells box in the crosstabs menu. In the Cells box, under percentages, select column.\n\n\nQuestionsAnswers\n\n\nUse the table and decide\n\nWhat percentage of males work full-time?\nIs it higher than the percentage of females who work full-time?\nWhat percentage of everyone works full-time?\n\n\n\nUse the table and decide:\n\n85% of males who are employed, work full-time.\nYes, only 50% of females who are employed work full-time.\n66% of people who are employed, work full-time.\n\n\n\n\n\n\nWhat percent of part-time workers are female?\nWe now know that women are more likely to work part-time. But what proportion of part-time workers are female? To answer this question, we need to calculate the percentages a different way.\n\nRepeat the steps above but in the Cells box select Row percentages instead of column.\n\nWe now get different percentages. The table divides the sample into part-time and full-time workers. Use the table and decide:\n\nQuestionsAnswers\n\n\n\nWhat percent of part-time workers are male?\nWhat percent of part-time workers are female?\n\n\n\n\nAbout 21% of part-time workers are male.\nAbout 79% of part-time workers are female",
+    "crumbs": [
+      "Exercise 3 - Relationships between variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 3.html#part-2-examining-levels-of-satisfaction-with-work",
+    "href": "Exercise 3.html#part-2-examining-levels-of-satisfaction-with-work",
+    "title": "Relationships between variables: Part-time work, gender and satisfaction",
+    "section": "Part 2: Examining levels of satisfaction with work",
+    "text": "Part 2: Examining levels of satisfaction with work\n\nCheck your variables\nStart by examining the variable MCZ_11.\n\nAnalyse &gt; descriptive statistics &gt; Frequencies\nSelect appropriate Charts and Statistics\n\n\n\nCompare means\nNow, let’s examine if satisfaction with work situation varies by sex.\n\nAnalyse &gt; Compare Means &gt; Means\n\nIn the box,\n\nAdd MCZ_11 to the dependent list.\nRSEX and FtPtWKR to Layer 1 of 1.\nPress OK.\n\n\nQuestionsAnswers\n\n\nReview the output and answer the following questions:\n\nWhat is the mean score for those in full-time work and is it higher or lower than those in part-time work?\nWhat is the mean score for males, is it higher than females?\n\n\n\n\nWhat is the mean score for those in full-time work and is it higher or lower than those in part-time work? The mean for those in full-time work is 6.8 – which is slightly higher than those in part-time work (6.61).\nWhat is the mean score for males, is it higher than females? Score for males is 6.34, which is slightly lower than the score for females, 6.61.\n\n\n\n\n\n\nAdding a layer to a table\nAs a a final step, let’s look at the difference between males and female part- time workers.\n\nAnalyse &gt; Compare Means &gt; Means\n\nIn the Means box,\n\nAdd MCZ_11 to the dependent list as before\nAdd only FtPtWKR to Layer 1 of 1\nClick Next in the layer box so that it shows Layer 2 of 2\nAdd Rsex\nClick OK\n\nWe now get a table that reports differences by both sex and whether someone is full or part time.\n\n\nQuestionsAnswers\n\n\n\nWhich group has the highest score?\nIs there a differences between male and female part-time workers in terms of their satisfaction with their work situation?\n\n\n\n\nMale and part-time\nMale part-time workers score lower in their satisfaction with their work situation (5.79) then both female part-time workers (6.82).",
+    "crumbs": [
+      "Exercise 3 - Relationships between variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 5.html",
+    "href": "Exercise 5.html",
+    "title": "Understanding satisfaction with work-life balance",
+    "section": "",
+    "text": "Exercises developed by Jen Buckley\nAre some people more satisfied with their work-life balance?\nIn this exercise, you will use correlation and regression to examine satisfaction with work-life balance 🙂⚖️, including:\n\nthe correlation between satisfaction with work-life balance and satisfaction with a person’s financial situation. ⚖️💰\nhow satisfaction with work-life balance is related to financial satisfaction, gender and full-time/part-time work. ⚖️⚧️⏲️\n\n\nLearning outcomes\nThe learning outcomes of this section are:\n\ncan use correlation to examine the relationship between continuous variables.\ncan create regression models to examine relationship between variables including adding dummy variables.\n\n\n\nCorrelation\nTo start examining the relationship between satisfaction with work-life balance and satisfaction with financial situation, we will examine correlations between the following variables:  \n\nMCZ_13 Overall, how satisfied are you with the balance between the time spend on paid job and the time spend on other aspects of life?\nMCZ_10 Overall, how satisfied are you with your financial situation?\nMCZ_7 Overall, how satisfied are you with your physical health?\n\nUse the SPSS menus:\n\nAnalyze &gt; Correlate &gt; Bivariate.\nAdd MCZ_13, MCZ_7 and MCZ_10 to the Variables list.\nOK.\n\nIn the output window, examine the results.\n\nQuestionsAnswers\n\n\nIs satisfaction with work life-balance correlated with\n\nSatisfaction with physical health?\nSatisfaction with financial situation?\n\n\n\nYes, there are statistically significant weak positive correlations:\n\n0.24 (p&lt;0.001).\n0.26 (p&lt;0.001).\n\n\n\n\n\n\nSimple regression\nWe are going to try to further understand satisfaction with work-life balance by using regression. We will create three regression models. Each model will include an additional variable:\n\nModel 1: Satisfaction with financial situation\nModel 2: Satisfaction with financial situation and gender\nModel 3: Satisfaction with financial situation, gender, and full-time/part-time.\n\n\nModel 1\nTo make the first model,\n\nAnalyze &gt; Regression &gt; Linear\nUnder dependent variable, add the variable MCZ_13.\nUnder independent variable, add the variable MCZ_10.\nClick OK.\n\nCheck your results - can you match the results to those in the table below (with some rounding!).\n\n\n\n\n\n\n\nVariables\nModel 1\n(B unstandardised coefficients)\n\n\nConstant\n5.096\n\n\nSatisfaction with financial situation\n0.260 (0.029) **\n\n\nMale\n-\n\n\nFulltime\n-\n\n\nR2\n0.07\n\n\n\nNote: * p-values less than 0.05 and ** p-values less than 0.01.\n\nQuestionsAnswers\n\n\n\nFor every unit increase in satisfaction with financial situation, how much does satisfaction with work-life balance increase or decrease?\nHow much of the variation does satisfaction with financial situation accounts for in satisfaction with work life-balance?\nWhat might these results suggest about the relationship?\n\n\n\n\nAccording to this model, for a unit increase in satisfaction with financial situation, satisfaction with work-life balance increases by 0.26.\nThe model indicates that satisfaction with financial situation is associated with around 6.6% of the variance in satisfaction with work life-balance.\nThere is a relationship between financial satisfaction and satisfaction with work-life balance. Is it causal i.e. does financial satisfaction lead to greater satisfaction with work-life balance? We don’t know from these results. Moreover, the R2 value indicates that if financial satisfaction has some influence on work-life balance satisfaction, other factors explain most of the variance in work-life satisfaction.\n\n\n\n\n\n\n\nDummy variables\nCategorical variables need to be added to regression models as dummy variables with calues of 0 or 1.\nWe therefore need to recode some variables in preparation for the next steps in our model building, where we add gender and full-tim/part-time.\nOpen a synax file. Copy and run the code below.\n\n*create dummy variables for sex, part-time/full-time work. \n\nRECODE RSEX (1=1) (2=0) (ELSE=SYSMIS) into Male.\nFREQUENCIES Male. \n\nRECODE FtPtWkr (1=1) (2=0) (ELSE=SYSMIS) into Fulltime. \nCROSSTABS FtPtWkr BY Fulltime.\n\n\nMultiple regression\nThe next step is to create models with two independent variables.\n\nModel 2\nCreate Model 2 by adding gender to the model. Use the new variable named Male. This is a dummy variable coded as 1=Male and 0=Female.\n\nAnalyze &gt; Regression &gt; Linear\nUnder dependent variable, add the variable MCZ_13\nUnder independent variable, add the variable MCZ_10 and Male\nClick OK\n\n\nQuestionsAnswers\n\n\n\nWhat can we conclude about gender differences in satisfaction with work-life balance?\nDoes including gender increase the R2 value?\n\n\n\n\nAccording to this model, on average, males are less happy with their work-life balance than females when control for differences in satisfaction with financial situation i.e. the negative association is independent of satisfaction with financial situation.\nWhen we add gender there is a very small increase in the R2 value. So still lots of variation in satisfaction unexplained by the model.\n\n\n\n\n\n\nModel 3\nRepeat the above process to add the binary variable iFulltime indicating whether someone works full- or part-time to the model.\nCheck your results, match the results in the table below (with rounding!).\n\n\n\n\n\n\n\n\n\nVariables\nModel 1\nModel 2\nModel 3\n\n\nConstant\n5.10\n5.351\n5.87\n\n\nSatisfaction with financial situation\n0.26 (0.03) ***\n0.252 (0.29)**\n0.268 (0.029)**\n\n\nMale\n-\n-..428 (0.13)**\n-0.39 (0.135)\n\n\nFulltime\n-\n-\n-1.187 (0.145)**\n\n\nR2\n0.066\n0.076\n0.13\n\n\n\n\nQuestionsAnswers\n\n\n\nWhat can you conclude about the relationship between working full or part-time and satisfaction with work-life balance?\nWhen we account for working full-time, what happens to the gender difference in satisfaction with work-life balance?\nDoes the value of R2 increase?\n\n\n\n\nWorking full-time is associated with lower satisfaction with work-life balance, with an average score -1..187 lower than those working part-time, controlling for differences in satisfaction with financial situation and gender.\nAccounting for differences between full-time and part-time employment, the difference between males and females reduces and is no longer statistically significant. (Why? Perhaps males are less satisfied on average because more men work full-time.)\nThe R2 value increases when we added Fulltime to the model.\n\n\n\n\n\n\nPrediction\nYou can use the results of the regression model to estimate values for people with specfic criteria.\nIn this case, let’s predict someone’s satisfaction with their work-life balance if they are male, work full-time and score 7 on their satisfaction with their financial situation.\nThis is the regression equation\n= constant + B1 (MCZ_10) + B2(Male) + B3 (Fulltime)\nAdd the values and calculate the score.\n=5.873 + 0.27(7) -0.04(1) -1.19(1)\n=5.87+1.89-0.04-1.19\n=6.53\n\nQuestionsAnswers\n\n\nCalculate the score for a female working part-time who is equally satisfied with their financial situation?\n\n\n=5.873 + 0.27(7) -0.04(0) -1.19(1)\n=5.87+1.89-1.19\n=7.72\n\n\n\n\n\n\nExtra\n\nCan you think of any problems with this model? For example, are there important factors left out? Do you agree with decisions about dependent and independent variables?\nAdd one of the following variables to the model\n\nSelf-rated health (remember about dummy variables)\nSatisfaction with health",
+    "crumbs": [
+      "Exercise 5 - Regression"
+    ]
+  },
+  {
+    "objectID": "Exercise 3.html#but-are-these-differences-statistically-significant",
+    "href": "Exercise 3.html#but-are-these-differences-statistically-significant",
+    "title": "Relationships between variables: Part-time work, gender and satisfaction",
+    "section": "But are these differences statistically significant?",
+    "text": "But are these differences statistically significant?\nIn this exercise, you have compared groups via a cross-tabulation and by comparing means. Examining these differences gives insight into the relationship between variables in the sample. But it is important to remember that we only have data from a sample. The next exercise looks at how we can build on these analyses to make inferences about the population.",
+    "crumbs": [
+      "Exercise 3 - Relationships between variables"
+    ]
+  },
+  {
+    "objectID": "Exercise 4.html#comparing-the-health-of-part-time-and-full-time-workers",
+    "href": "Exercise 4.html#comparing-the-health-of-part-time-and-full-time-workers",
+    "title": "Examining part-time workers",
+    "section": "Comparing the health of part-time and full-time workers",
+    "text": "Comparing the health of part-time and full-time workers\nCreate a crosstabulation with a chi-square test examining self-rated health and the variable indicating if someone is working full or part time. The variables are: FtPtWrk and QHealthr3 – the new variable.\n\nAnalyse &gt; descriptive statistics &gt; crosstab\n\nWhich variable in the rows and which in the columns?\nIt doesn’t really matter; the numbers will be the same. However, row and column percentages depend on which variable is in the rows and which in the columns.\nOften, we put the dependent variable in the rows and the explanatory variable in the columns and calculate column percentages. This approach means we can compare the distribution of cases across categories of the dependent variable for each category on our independent variable.\n\nFtPtWrk in the columns and QHealthr3 in the rows\nCells &gt; column percentages &gt; continue\nStatistics&gt; Chi-square test &gt; continue\nOK\n\nQuestionsAnswers\n\n\n\nBased on the results, what can we conclude about overall differences in health between part-time and full-time workers?\n\n\n\n\nThere are small differences in the percentages – for example 85 percent of full-time workers indicate having good health compared to 81 percent of part-time workers but the association is not statistically significant (chi-square 4.321, 2 d.f. p=0.115).\n\n\n\n\n\n\nWhat about gender?\nFrom exercise 3, we found that there were some differences between male and female part-time workers. To investigate this further, we are going to consider gender too. Repeat the crosstabs above and\n\nAdd RSEX as a Layer\n\nConsider the results.\n\nQuestionsAnswers\n\n\n\nWhat can we conclude about overall differences in health between part-time and full-time workers for each gender?\n\n\n\n\nAmong men, there is significant association between being a part-time worker and self-rated health, which less good health indicated by men working part-time then full-time. There is not an association between part-time work and self-rated health among women.",
+    "crumbs": [
+      "Exercise 4 - Chi-square and t-test"
+    ]
+  }
+]

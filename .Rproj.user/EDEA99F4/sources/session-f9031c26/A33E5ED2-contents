@@ -1,0 +1,27 @@
+---
+title: "Workplace Analysis and Research Skills: SPSS Exercises"
+---
+
+![](work.jpg){fig-align="left" width="153"}
+
+# About
+
+In the following exercises, you can:
+
+-   explore real survey data using SPSS.
+
+-   examine relationships between part-time work, gender, and well-being. For example, do part-time workers report better health and wellbeing than fulltime workers and does this vary by gender?
+
+Before starting the exercises you need to access the data.
+
+👇
+
+# **Access the data**
+
+The exercises use a dataset containing data from the Opinions and Lifestyle Survey, Well-Being Module, Jan-May, 2015, which is a survey run by the UK Office for National Statistics. To access the data:
+
+-   Click this link: [Opinions and Lifestyle Survey, Well-Being Module, April-May 2015: Unrestricted Access Teaching Dataset](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7913#!/access-data)
+
+-   Download the SPSS version.
+
+Now you can start [Exercise 1](Exercise%201.qmd).
