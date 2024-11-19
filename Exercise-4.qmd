@@ -146,7 +146,7 @@ What are the means for those working full-time and those working part-time? Whic
 
 ## Answers
 
-Those working full-time has a lower average score 6.61 than those working part-time 6.61
+Those working full-time has a lower average score 6.64 than those working part-time 7.15
 :::
 
 ### Now consider the results of the t-test.
@@ -170,7 +170,7 @@ According to the T-test, are the differences between part-time workers and full-
 
 ## Answers
 
-According to the T-test, the difference between part-time workers and full-time workers is statistically significant (t=-8.741, p\<0.001).
+According to the T-test, the difference between part-time workers and full-time workers is statistically significant (t=-3.820, p\<0.001).
 :::
 
 ## Independent task
