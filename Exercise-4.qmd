@@ -4,6 +4,10 @@ title: "Examining part-time workers "
 
 Use data to explore the following questions:
 
+-   Do part-time workers have better heath? Does this vary by gender?
+
+-   Do part-time workers have higher satisfaction with their work-life balance?
+
 ### Learning outcomes
 
 The learning outcomes of this section are:
@@ -41,7 +45,7 @@ The variable `QHealthr` has five categories (Very good, Good, Fair, Bad, Very ba
 Add the following code to your syntax file (or make a new one if you need to) then run the code. To run the code, highlight the code you want to run and press the green arrow.
 
 ```         
-*Recode self-rated heath to a three category variable 
+*Recode self-rated heath to a three category variable.
 Recode QHealthr (1, 2 =1) (3=2) (4, 5=3) (ELSE =copy) into Qhealthr3. 
 Value labels Qhealthr3 
 1 'Good' 
