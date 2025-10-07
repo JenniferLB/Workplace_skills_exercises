@@ -24,4 +24,4 @@ The exercises use a dataset containing data from the Opinions and Lifestyle Surv
 
 -   Download the SPSS version.
 
-Now you can start [Exercise 1](Exercise%201.qmd).
+Now you can start [Exercise 1](Exercise-1.qmd).
