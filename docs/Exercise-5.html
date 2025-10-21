@@ -153,13 +153,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
   <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">Correlation</a></li>
-  <li><a href="#simple-regression" id="toc-simple-regression" class="nav-link" data-scroll-target="#simple-regression">Simple regression</a>
+  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression</a>
   <ul class="collapse">
   <li><a href="#model-1" id="toc-model-1" class="nav-link" data-scroll-target="#model-1">Model 1</a></li>
-  </ul></li>
   <li><a href="#dummy-variables" id="toc-dummy-variables" class="nav-link" data-scroll-target="#dummy-variables">Dummy variables</a></li>
-  <li><a href="#multiple-regression" id="toc-multiple-regression" class="nav-link" data-scroll-target="#multiple-regression">Multiple regression</a>
-  <ul class="collapse">
   <li><a href="#model-2" id="toc-model-2" class="nav-link" data-scroll-target="#model-2">Model 2</a></li>
   <li><a href="#model-3" id="toc-model-3" class="nav-link" data-scroll-target="#model-3">Model 3</a></li>
   <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction</a></li>
@@ -190,8 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Exercises developed by Jen Buckley</p>
-<p>Are some people more satisfied with their work-life balance?</p>
-<p>In this exercise, you will use correlation and regression to examine satisfaction with work-life balance 🙂⚖️, including:</p>
+<p>In this exercise, you will use <strong>correlation</strong> and <strong>regression</strong> to examine satisfaction with work-life balance 🙂⚖️, including:</p>
 <ul>
 <li><p>the correlation between satisfaction with work-life balance and satisfaction with a person’s financial situation. ⚖️💰</p></li>
 <li><p>how satisfaction with work-life balance is related to financial satisfaction, gender and full-time/part-time work. ⚖️⚧️⏲️</p></li>
@@ -206,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="correlation" class="level1">
 <h1>Correlation</h1>
-<p>To start examining the relationship between satisfaction with work-life balance and satisfaction with financial situation, we will examine correlations between the following variables: &nbsp;</p>
+<p>To start examining the relationship between satisfaction with work-life balance and satisfaction with other aspects of life, we will examine correlations between the following variables: &nbsp;</p>
 <ul>
 <li><p><code>MCZ_13</code> Overall, how satisfied are you with the balance between the time spend on paid job and the time spend on other aspects of life?</p></li>
 <li><p><code>MCZ_10</code> Overall, how satisfied are you with your financial situation?</p></li>
@@ -232,41 +228,48 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>Yes, there are statistically significant weak positive correlations:</p>
 <ul>
-<li><p>0.24 (p&lt;0.001).</p></li>
-<li><p>0.26 (p&lt;0.001).</p></li>
+<li>Satisfaction with physical health? 0.239 (p&lt;0.001).</li>
+</ul>
+<!-- -->
+<ul>
+<li>Satisfaction with financial situation? 0.258 (p&lt;0.001).</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="simple-regression" class="level1">
-<h1>Simple regression</h1>
+<section id="regression" class="level1">
+<h1>Regression</h1>
 <p>We are going to try to further understand satisfaction with work-life balance by using regression. We will create three regression models. Each model will include an additional variable:</p>
 <ul>
 <li><p>Model 1: Satisfaction with financial situation</p></li>
 <li><p>Model 2: Satisfaction with financial situation and gender</p></li>
 <li><p>Model 3: Satisfaction with financial situation, gender, and full-time/part-time.</p></li>
 </ul>
-<section id="model-1" class="level3">
-<h3 class="anchored" data-anchor-id="model-1">Model 1</h3>
+<section id="model-1" class="level2">
+<h2 class="anchored" data-anchor-id="model-1">Model 1</h2>
 <p>To make the first model,</p>
 <ul>
 <li><p><strong>Analyze &gt; Regression &gt; Linear</strong></p></li>
 <li><p><strong>Under dependent variable, add the variable MCZ_13.</strong></p></li>
 <li><p><strong>Under independent variable, add the variable MCZ_10.</strong></p></li>
-<li><p><strong>Click OK.</strong></p></li>
+</ul>
+<p>Instead of OK, click Paste. This will add the code for the model to a syntax file. This is a helpful feature for learning syntax, and creating a record of what you have done.</p>
+<p><img src="Paste.png" class="img-fluid" width="247"></p>
+<ul>
+<li>Now, run the model by selecting the code in the syntax file and pressing the green arrow.</li>
 </ul>
 <p>Check your results - can you match the results to those in the table below (with some rounding!).</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 54%">
-<col style="width: 45%">
+<col style="width: 52%">
+<col style="width: 47%">
 </colgroup>
 <tbody>
 <tr class="odd">
 <td>Variables</td>
 <td><p>Model 1</p>
-<p>(B unstandardised coefficients)</p></td>
+<p>(<em>B</em> unstandardised coefficients)</p></td>
 </tr>
 <tr class="even">
 <td>Constant</td>
@@ -286,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>R<sup>2</sup></td>
-<td>0.07</td>
+<td>0.066</td>
 </tr>
 </tbody>
 </table>
@@ -297,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <ol type="1">
 <li><p>For every unit increase in satisfaction with financial situation, how much does satisfaction with work-life balance increase or decrease?</p></li>
-<li><p>How much of the variation does satisfaction with financial situation accounts for in satisfaction with work life-balance?</p></li>
+<li><p>According to the model, how much of the variation in satisfaction with work life-balance is associated with satisfaction with financial situation?</p></li>
 <li><p>What might these results suggest about the relationship?</p></li>
 </ol>
 </div>
@@ -311,12 +314,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-</section>
-<section id="dummy-variables" class="level1">
-<h1>Dummy variables</h1>
-<p>Categorical variables need to be added to regression models as dummy variables with calues of 0 or 1.</p>
+<section id="dummy-variables" class="level2">
+<h2 class="anchored" data-anchor-id="dummy-variables">Dummy variables</h2>
+<p>Categorical variables need to be added to regression models as dummy variables with values of 0 or 1.</p>
 <p>We therefore need to recode some variables in preparation for the next steps in our model building, where we add gender and full-tim/part-time.</p>
-<p>Open a synax file. Copy and run the code below.</p>
+<p>In a syntax file, copy and run the code below.</p>
 <pre><code>
 *create dummy variables for sex, part-time/full-time work. 
 
@@ -326,17 +328,18 @@ FREQUENCIES Male.
 RECODE FtPtWkr (1=1) (2=0) (ELSE=SYSMIS) into Fulltime. 
 CROSSTABS FtPtWkr BY Fulltime.</code></pre>
 </section>
-<section id="multiple-regression" class="level1">
-<h1>Multiple regression</h1>
-<p>The next step is to create models with two independent variables.</p>
-<section id="model-2" class="level3">
-<h3 class="anchored" data-anchor-id="model-2">Model 2</h3>
+<section id="model-2" class="level2">
+<h2 class="anchored" data-anchor-id="model-2">Model 2</h2>
 <p>Create Model 2 by adding gender to the model. Use the new variable named Male. This is a dummy variable coded as 1=Male and 0=Female.</p>
 <ul>
 <li><p><strong>Analyze &gt; Regression &gt; Linear</strong></p></li>
 <li><p><strong>Under dependent variable, add the variable MCZ_13</strong></p></li>
 <li><p><strong>Under independent variable, add the variable MCZ_10 and Male</strong></p></li>
-<li><p><strong>Click OK</strong></p></li>
+<li><p><strong>Paste to your syntax file.</strong></p></li>
+</ul>
+<p>Before running the code, compare the syntax for Model 1 and Model 2.</p>
+<ul>
+<li><strong>Run the code from the syntax file.</strong></li>
 </ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Answers</a></li></ul>
@@ -349,23 +352,23 @@ CROSSTABS FtPtWkr BY Fulltime.</code></pre>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <ol type="1">
-<li><p>According to this model, on average, males are less happy with their work-life balance than females when control for differences in satisfaction with financial situation i.e.&nbsp;the negative association is independent of satisfaction with financial situation.</p></li>
+<li><p>According to this model, on average, males are less happy with their work-life balance than females, controlling for differences in satisfaction with financial situation. This means the negative association is independent of satisfaction with financial situation.</p></li>
 <li><p>When we add gender there is a very small increase in the R<sup>2</sup> value. So still lots of variation in satisfaction unexplained by the model.</p></li>
 </ol>
 </div>
 </div>
 </div>
 </section>
-<section id="model-3" class="level3">
-<h3 class="anchored" data-anchor-id="model-3">Model 3</h3>
-<p>Repeat the above process to add the binary variable <code>Fulltime</code> indicating whether someone works full- or part-time to the model.</p>
+<section id="model-3" class="level2">
+<h2 class="anchored" data-anchor-id="model-3">Model 3</h2>
+<p>Repeat the above process to add the binary variable <code>Fulltime</code> indicating whether someone works full- or part-time to the model. Either use the menus or see if you can adapt the syntax from Model 2 to include the new variable.</p>
 <p>Check your results, match the results in the table below (with rounding!).</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 38%">
+<col style="width: 20%">
+<col style="width: 19%">
+<col style="width: 20%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -419,7 +422,7 @@ CROSSTABS FtPtWkr BY Fulltime.</code></pre>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <ol type="1">
-<li><p>Working full-time is associated with lower satisfaction with work-life balance, with an average score -1..187 lower than those working part-time, controlling for differences in satisfaction with financial situation and gender.</p></li>
+<li><p>Working full-time is associated with lower satisfaction with work-life balance with an average score -1.187 less than those working part-time when we control for differences in satisfaction with financial situation and gender.</p></li>
 <li><p>Accounting for differences between full-time and part-time employment, the difference between males and females reduces and is no longer statistically significant. (Why? Perhaps males are less satisfied on average because more men work full-time.)</p></li>
 <li><p>The R<sup>2</sup> value increases when we added Fulltime to the model.</p></li>
 </ol>
@@ -427,16 +430,21 @@ CROSSTABS FtPtWkr BY Fulltime.</code></pre>
 </div>
 </div>
 </section>
-<section id="prediction" class="level3">
-<h3 class="anchored" data-anchor-id="prediction">Prediction</h3>
-<p>You can use the results of the regression model to estimate values for people with specific criteria.</p>
-<p>In this case, let’s predict someone’s satisfaction with their work-life balance if they are male, work full-time and score 7 on their satisfaction with their financial situation.</p>
+<section id="prediction" class="level2">
+<h2 class="anchored" data-anchor-id="prediction">Prediction</h2>
+<p>You can use the results of a regression model to estimate values for people with specific criteria.</p>
+<p>In this case, let’s use Model 3 results to predict someone’s satisfaction with their work-life balance if they are male, work full-time and score 7 on their satisfaction with their financial situation.</p>
 <p>This is the regression equation</p>
-<p>= constant + B1 (MCZ_10) + B2(Male) + B3 (Fulltime)</p>
-<p>Add the values and calculate the score.</p>
-<p>=5.873 + 0.27(7) -0.04(1) -1.19(1)</p>
-<p>=5.87+1.89-0.04-1.19</p>
-<p>=6.53</p>
+<p>= 5.87+0.268(Financial&nbsp;Satisfaction)−0.39(Male)−1.187(Fulltime)</p>
+<p>Add the values:</p>
+<ul>
+<li><p>Financial Satisfaction = 7</p></li>
+<li><p>Male = 1 (yes, male)</p></li>
+<li><p>Fulltime = 1 (yes, full-time)</p>
+<p>=5.87+(0.268×7)−(0.39×1)−(1.187×1)</p>
+<p>=5.87+1.87-0.39-1.187</p>
+<p>=6.17</p></li>
+</ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Questions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Answers</a></li></ul>
 <div class="tab-content">
@@ -444,9 +452,10 @@ CROSSTABS FtPtWkr BY Fulltime.</code></pre>
 <p>Calculate the score for a female working part-time who is equally satisfied with their financial situation?</p>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-<p>=5.873 + 0.27(7) -0.04(0) -1.19(0)</p>
-<p>=5.87+1.89</p>
-<p>=7.76</p>
+<p>=5.87+0.268(7)−0.39(0)−1.187(0)</p>
+<p>=5.87+1.876</p>
+<p>=7.746</p>
+<p>So the female part-time worker’s predicted work–life balance satisfaction is about 1.6 points higher on average than the male full-time worker’s, controlling for satisfaction with financial satisfaction.</p>
 </div>
 </div>
 </div>
