@@ -50,9 +50,6 @@ Is satisfaction with work life-balance correlated with
 Yes, there are statistically significant weak positive correlations:
 
 -   Satisfaction with physical health? 0.239 (p\<0.001).
-
-<!-- -->
-
 -   Satisfaction with financial situation? 0.258 (p\<0.001).
 :::
 
@@ -80,7 +77,11 @@ Instead of OK, click Paste. This will add the code for the model to a syntax fil
 
 ![](Paste.png){width="247"}
 
--   Now, run the model by selecting the code in the syntax file and pressing the green arrow.
+You should see something like the image below in a syntax file.
+
+![](images/clipboard-775654591.png){width="284"}
+
+-   Run the model by selecting the code in the syntax file and pressing the green arrow.
 
 Check your results - can you match the results to those in the table below (with some rounding!).
 
