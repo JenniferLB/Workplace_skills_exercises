@@ -161,11 +161,12 @@ Refer to the SPSS output in the table labelled **Independent Samples Test**. The
 
 -   ‘Equal Variances not assumed’ - in the bottom row.
 
-Which do you use? Levene’s Test for Equality of Variances is designed to tell whether we can assume equal variances or not. The results are included in the first two columns containing data.
+**Which do you use?**\
+Levene’s Test for Equality of Variances tells us whether we can assume that the variances of the two groups are equal. The results appear in the first two columns of the t-test output.
 
-A result of p\<0.05 would mean it is very unlikely that variances are equal between the two groups, and therefore it is wise to use the results when 'Equal variances are not assumed'. Conversely, if p is not p\<0.05, we can consider "Equal variances assumed".
+If *p* \< 0.05, it is unlikely that the variances are equal, so you should refer to the row where “Equal variances are not assumed”. If *p* ≥ 0.05, you can use the results in the “Equal variances assumed” row.
 
-Identify the columns t, df and Sig. (2-tailed) – these are the t-test results.
+Next, identify the columns **t**, **df**, and **Sig. (2-tailed)** – these provide the key t-test results.
 
 ::: panel-tabset
 ## Questions
@@ -174,7 +175,7 @@ According to the T-test, are the differences between part-time workers and full-
 
 ## Answers
 
-According to the T-test, the difference between part-time workers and full-time workers is statistically significant (t=-8.243, p\<0.001).
+According to the T-test, the difference between part-time workers and full-time workers is statistically significant (t=-8.741, p\<0.001).
 :::
 
 ## Independent task
