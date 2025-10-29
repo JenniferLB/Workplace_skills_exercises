@@ -116,16 +116,16 @@ Check your results - can you match the results to those in the table below (with
 
 1.  According to this model, for a unit increase in satisfaction with financial situation, satisfaction with work-life balance increases by 0.26.
 
-2.  Approximately 6.6% (R2=.066R^2 = .06) of the variance in satisfaction with work–life balance is accounted for by a model including satisfaction with one’s financial situation.
+2.  Approximately 6.6% (R2=.066) of the variance in satisfaction with work–life balance is accounted for by a model including satisfaction with one’s financial situation.
 
-3.  There is a relationship between financial satisfaction and satisfaction with work-life balance. Is it causal i.e. does financial satisfaction lead to greater satisfaction with work-life balance? We don't know from these results. Moreover, the R^2^ value indicates that if financial satisfaction has some influence on work-life balance satisfaction, other factors explain most of the variance in work-life satisfaction.
+3.  The results suggest that people who are more satisfied with their financial situation also tend to report slightly higher satisfaction with their work–life balance. However, the relationship is modest, and the low R2 value indicates that financial satisfaction explains only a small proportion of work–life balance satisfaction. Many other factors are likely to play a larger role.
 :::
 
 ## Dummy variables
 
-Categorical variables need to be added to regression models as dummy variables with values of 0 or 1.
+Categorical variables need to be added to regression models as binary (also called dummy) variables with values of 0 or 1.
 
-We therefore need to recode some variables in preparation for the next steps in our model building, where we add gender and full-tim/part-time.
+We therefore need to recode some variables in preparation for the next steps in our model building, where we add gender and full-time/part-time.
 
 In a syntax file, copy and run the code below.
 
@@ -174,14 +174,14 @@ Before running the code, compare the syntax for Model 1 and Model 2.
 
 Repeat the above process to add the binary variable `Fulltime` indicating whether someone works full- or part-time to the model. Either use the menus or see if you can adapt the syntax from Model 2 to include the new variable.
 
-Check your results, match the results in the table below (with rounding!).
+Check your results, match the results in the table below.
 
 +---------------------------------------+--------------------+-------------------+--------------------+
 | Variables                             | Model 1            | Model 2           | Model 3            |
 +---------------------------------------+--------------------+-------------------+--------------------+
 | Constant                              | 5.10               | 5.351             | 5.87               |
 +---------------------------------------+--------------------+-------------------+--------------------+
-| Satisfaction with financial situation | 0.26 (0.03) \*\*\* | 0.252 (0.29)\*\*  | 0.268 (0.029)\*\*  |
+| Satisfaction with financial situation | 0.26 (0.03) \*\*\* | 0.252 (0.029)\*\* | 0.268 (0.029)\*\*  |
 +---------------------------------------+--------------------+-------------------+--------------------+
 | Male                                  | \-                 | -..428 (0.13)\*\* | -0.39 (0.135)      |
 +---------------------------------------+--------------------+-------------------+--------------------+
@@ -190,7 +190,7 @@ Check your results, match the results in the table below (with rounding!).
 | R^2^                                  | 0.066              | 0.076             | 0.13               |
 +---------------------------------------+--------------------+-------------------+--------------------+
 
-*Note: \* p-values less than 0.05 and \*\* p-values less than 0.001.*
+*Note: \* p-values less than 0.05 and \*\* p-values less than 0.01.*
 
 ::: panel-tabset
 ## Questions
@@ -203,9 +203,9 @@ Check your results, match the results in the table below (with rounding!).
 
 ## Answers
 
-1.  Working full-time is associated with lower satisfaction with work-life balance with an average score -1.187 less than those working part-time when we control for differences in satisfaction with financial situation and gender.
+1.  Working full-time is associated with lower satisfaction with work–life balance, with an average score 1.187 points lower than those working part-time, after controlling for satisfaction with financial situation and gender.
 
-2.  Accounting for differences between full-time and part-time employment, the difference between males and females reduces and is no longer statistically significant. (Why? Perhaps males are less satisfied on average because more men work full-time.)
+2.  When employment status is included in the model, the difference in work–life balance satisfaction between males and females is reduced and is no longer statistically significant. This suggests that the previously observed gender difference may be explained by the higher proportion of men working full-time, which is associated with lower work–life balance satisfaction.
 
 3.  The R^2^ value increases when we added Fulltime to the model.
 :::
