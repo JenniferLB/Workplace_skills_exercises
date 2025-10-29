@@ -101,7 +101,7 @@ Check your results - can you match the results to those in the table below (with
 | R^2^                                  | 0.066                             |
 +---------------------------------------+-----------------------------------+
 
-*Note: \* p-values less than 0.05 and \*\* p-values less than 0.001.*
+*Note: \* p-values less than 0.05 and \*\* p-values less than 0.01.*
 
 ::: panel-tabset
 ## Questions
@@ -116,7 +116,7 @@ Check your results - can you match the results to those in the table below (with
 
 1.  According to this model, for a unit increase in satisfaction with financial situation, satisfaction with work-life balance increases by 0.26.
 
-2.  The model indicates that satisfaction with financial situation is associated with around 6.6% of the variance in satisfaction with work life-balance.
+2.  Approximately 6.6% (R2=.066R^2 = .06) of the variance in satisfaction with work–life balance is accounted for by a model including satisfaction with one’s financial situation.
 
 3.  There is a relationship between financial satisfaction and satisfaction with work-life balance. Is it causal i.e. does financial satisfaction lead to greater satisfaction with work-life balance? We don't know from these results. Moreover, the R^2^ value indicates that if financial satisfaction has some influence on work-life balance satisfaction, other factors explain most of the variance in work-life satisfaction.
 :::
